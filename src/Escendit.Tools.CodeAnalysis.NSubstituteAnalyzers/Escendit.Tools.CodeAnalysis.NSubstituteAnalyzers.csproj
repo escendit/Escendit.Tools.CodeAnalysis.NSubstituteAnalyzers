@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <DevelopmentDependency>true</DevelopmentDependency>
+        <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
+        <NoWarn>$(NoWarn);NU5128</NoWarn>
+        <IsPackable>true</IsPackable>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <Description>Enforce our coding practices in your projects with our NuGet package's default settings for NSubstitute Analyzers.</Description>
+        <PackageTags>analyzers;nsubstitute;unit test;unit testing;defaults</PackageTags>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="NSubstitute.Analyzers.CSharp" Version="1.0.16">
+            <PrivateAssets>runtime; build; native; contentfiles</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+    <ItemGroup>
+        <!-- TFM -->
+        <None Pack="true" PackagePath="build" Include="Escendit.Tools.CodeAnalysis.NSubstituteAnalyzers.props" />
+        <None Pack="true" PackagePath="build" Include="Escendit.Tools.CodeAnalysis.NSubstituteAnalyzers.targets" />
+        <!-- TFMs -->
+        <None Pack="true" PackagePath="buildMultiTargeting" Include="Escendit.Tools.CodeAnalysis.NSubstituteAnalyzers.props" />
+        <None Pack="true" PackagePath="buildMultiTargeting" Include="Escendit.Tools.CodeAnalysis.NSubstituteAnalyzers.targets" />
+        <!-- Transitive -->
+        <None Pack="true" PackagePath="buildTransitive" Include="Escendit.Tools.CodeAnalysis.NSubstituteAnalyzers.props" />
+        <None Pack="true" PackagePath="buildTransitive" Include="Escendit.Tools.CodeAnalysis.NSubstituteAnalyzers.targets" />
+        <!-- Assets -->
+        <None Pack="true" PackagePath="" Include="Escendit.Tools.CodeAnalysis.NSubstituteAnalyzers.globalconfig" />
+        <!-- README -->
+        <None Pack="true" PackagePath="" Include="$(SolutionDir)/README.md" />
+    </ItemGroup>
+</Project>
