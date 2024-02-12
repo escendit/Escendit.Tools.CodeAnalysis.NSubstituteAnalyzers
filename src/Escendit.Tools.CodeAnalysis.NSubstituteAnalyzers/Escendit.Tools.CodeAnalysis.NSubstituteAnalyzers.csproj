@@ -9,7 +9,7 @@
         <PackageTags>analyzers;nsubstitute;unit test;unit testing;defaults</PackageTags>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="NSubstitute.Analyzers.CSharp" Version="1.0.16">
+        <PackageReference Include="NSubstitute.Analyzers.CSharp" Version="1.0.17">
             <PrivateAssets>runtime; build; native; contentfiles</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
